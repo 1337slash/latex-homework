@@ -1,0 +1,125 @@
+% !TEX encoding = UTF-8
+% !TEX program = pdflatex
+\documentclass[a4paper,11pt,twoside,openright]{book}
+\usepackage[T1]{fontenc}            % imposta la codifica dei font
+\usepackage[utf8]{inputenc}         % lettere accentate da tastiera
+\usepackage[english,italian]{babel} % per scrivere in italiano
+\usepackage{blindtext}              % genera testo fittizio
+\usepackage{booktabs}               % gestisce al meglio la rappresentazione in tabelle
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{comment}                % su puo' commentare un'intera porzione di testo
+\usepackage{emptypage}              % per avere il layout vuoto di una pagina bianca
+\usepackage{graphicx}               % per inserire immagini
+\usepackage{ifthen}                 % permette di inserire anche il ciclo while
+\usepackage{latexsym}               % permette di inserire i simboli di LaTeX
+\usepackage{listings}               % per scrivere codice di programmazione
+\usepackage{lipsum}                 % genera testo fittizio
+\usepackage{quoting}                % rappresentare al meglio le citazioni
+\usepackage{shorttoc}               % indice abbreviato
+\usepackage{textcomp}               % collezione di simboli
+\usepackage{verbatim}               % permette di inserire il testo cosi' come appare, senza interpretazione
+\usepackage{url}                    % per scrivere gli indirizzi Internet
+% \usepackage[section]{placeins}      % confina le immagini all'interno dei paragrafi in cui sono inserite (da usare solo se si hanno molte immagini con poco testo)
+
+% controllo la sillabazione delle parole tra parentesi
+% le parole tra parentesi NON saranno sillabate per andare a capo
+% \hyphenation{VMWare VirtualBox Microsoft Windows Enterprise}
+
+\pagestyle{headings}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+%    PARTE INTRODUTTIVA    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+  \frontmatter
+  % scrive la copertina
+  \thispagestyle{empty}
+  \vrule
+  \vbox{\vskip 1.0cm \vfil {\Large 
+    % qui scrivere Cognome Nome allievo
+    *** ***
+    }\vfil\vbox{\vskip 4.5cm \vfil {\Huge \bfseries  
+    % qui scrivere il titolo della guida
+    Windows Server 2008
+    \vfil}
+    \LARGE \itshape \vskip 0.5cm {Installazione}
+    {\vskip 0.5cm \itshape \LARGE 
+    % qui scrivere l'eventuale sottotitolo
+    %\vfil}{\vskip 3.5cm \itshape \normalsize 
+    % note aggiuntive
+    }\vfil\vbox{\vskip 5cm \vfil 
+    \includegraphics[scale=0.8]{images/irigem} \vfil 
+    \makebox[3.3cm][s]{\Large 
+    A.S. 2 0 1 8 / 1 9
+    } \vfil
+    }}
+  }
+
+  % scrive l'indice
+  \tableofcontents
+
+  \mainmatter
+
+% v2.0 - 30.09.2018
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+%    PARTE PRINCIPALE    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+
+% Qui di seguito e' riportato un esempio di scrittura del codice da usare 
+% per la creazione della tesina finale; per realizzare e consegnare una 
+% sola guida bisogna mettere gli opprtuni commenti nelle righe che non 
+% servono.
+
+% Tutte le righe che iniziano col comando \part servono per creare le 
+% varie SUDDIVISIONI PER OGNI MATERIA e lo si fa con la tesina finale,
+% quindi se bisogna consegnare una guida sola, bisogna commentare tutte
+% le righe che iniziano con \part aggiungendo ad inizio riga il simbolo 
+% della percentuale, proprio come in queste righe.
+
+% Tutte le righe che iniziano con \input servono per INCLUDERE tutte
+% le guide che si desiderano e fare in modo che appaiano tutte insieme 
+% in un unico documento.
+
+% Il nome del file di ogni guida va creato a fianco e poi riportato
+% all'interno del comando \input, cosi' come specificato negli esempi
+% che seguono.
+
+% Qui di seguito c'e' un esempio di creazione di una tesina di fine anno 
+% con quattro divisioni per quattro materie, ognuna delle quali specificata 
+% dalla riga col comando \part 
+% Per ogni materia sono state specificate tutte le guide da includere.
+
+% Per personalizzare il tutto basta modificare e/o aggiungere le varie
+% sezioni delle varie materie e includere le guide desiderate, commentando
+% le righe che non servono.
+% Per una migliore gestione delle guide da aggiungere, si consiglia
+% quanto segue:
+% - ogni volta che durante l'anno bisogna creare una guida, basta commentare
+%   tutte le righe che non servono e lasciare solo quella che inizia con 
+%   \input e specifica il nome della guida da realizzare
+% - far iniziare il nome della guida con il nome della materia e proseguire
+%   con l'argomento trattato all'interno della guida stessa, cosi' come 
+%   negli esempi
+% - creare all'interno della cartella images, specificata a fianco, una 
+%   cartella con lo stesso nome della guida che si vuole aggiungere e
+%   aggiungere li' dentro tutte le immagini relative alla guida specificata
+% - a fine anno, per creare la tesina, basta togliere i commenti dalle righe
+%   di tutte le materie e da tutte le guide da includere
+
+\input{guida}
+
+%\part{ITALIANO}
+%\input{italiano-dante}
+%\input{italiano-leopardi}
+
+%\part{GESTIONE DEI SISTEMI}
+%\input{gestione-nas.tex}
+
+%\part{SICUREZZA INFORMATICA}
+%\input{sicurezza-gpg.tex}
+%\input{sicurezza-vpn.tex}
+
+
+
+\end{document}
+
